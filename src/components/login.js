@@ -1,7 +1,7 @@
 import React from "react";
 
 const Login = props => (
-  <div className="infoWeath">
+  <div className="infoForm">
     {props.login &&
       <div>
         <p>Ваш логин: {props.login}</p>
