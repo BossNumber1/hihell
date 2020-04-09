@@ -1,7 +1,7 @@
 import React from "react"; 
-import Info from "./components2/info2.js";
-import Form from "./components2/form2.js";
-import Login from "./components2/login2.js";
+import Info from "./components/info.js";
+import Form from "./components/form.js";
+import Login from "./components/login.js";
 
 class App extends React.Component {
 
