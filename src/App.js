@@ -1,7 +1,10 @@
+import io from 'socket.io-client';
 import React from "react"; 
+import './App.css';
 import Info from "./components/info.js";
 import Form from "./components/form.js";
 import Login from "./components/login.js";
+import ScriptLoad from "./components/scriptLoad.js";
 
 class App extends React.Component {
 
@@ -53,6 +56,7 @@ class App extends React.Component {
                   password={this.state.password}
                   error={this.state.error}
                 />
+                <ScriptLoad name={this.state.login} />
               </div>
             </div>
           </div>
@@ -63,3 +67,8 @@ class App extends React.Component {
 }
 
 export default App;
+
+// export default function App() {
+//   const [name, setName] = useState("123");
+//   return <ScriptLoad name={name} />;
+// }
