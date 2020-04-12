@@ -1,7 +1,9 @@
 import io from 'socket.io-client';
 import React from "react"; 
-import './App.css';
-import Info from "./components/info.js";
+// import './App.css';
+import './Main.css';
+// import Info from "./components/info.js";
+import Menu from "./components/menu.js";
 import Form from "./components/form.js";
 import Login from "./components/login.js";
 class App extends React.Component {
@@ -57,9 +59,9 @@ class App extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-sm-5 info">
-                <Info />
+                <Menu />
               </div>
-              <div className="col-sm-7 form">
+              <div className="col-sm-12 form">
                 <Form loginMethod={this.gettingForm} />
                 <Login
                   login={this.state.login}
