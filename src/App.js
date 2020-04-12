@@ -4,8 +4,6 @@ import './App.css';
 import Info from "./components/info.js";
 import Form from "./components/form.js";
 import Login from "./components/login.js";
-import ScriptLoad from "./components/scriptLoad.js";
-
 class App extends React.Component {
 
   state = {
@@ -31,6 +29,18 @@ class App extends React.Component {
         password: dataPass,
         error: undefined
       });
+
+      //теперь запускаем socket.io и отправляем данные на сервер
+            
+              let socket = io.connect('localhost:3000');
+              
+                socket.emit('send mess', {login: login, mess: password});
+
+                socket.on('add mess', function (data) {
+                  console.log("проверка! передающиеся данные = ", data);
+                });
+              
+            
     } else {
       this.setState({
         login: undefined,
@@ -56,7 +66,7 @@ class App extends React.Component {
                   password={this.state.password}
                   error={this.state.error}
                 />
-                <ScriptLoad name={this.state.login} />
+                {/* <ScriptLoad name={this.state.login} /> */}
               </div>
             </div>
           </div>
@@ -67,8 +77,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-// export default function App() {
-//   const [name, setName] = useState("123");
-//   return <ScriptLoad name={name} />;
-// }
