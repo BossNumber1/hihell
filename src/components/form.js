@@ -17,12 +17,21 @@ const Form = (props) => (
         </tr>
         <tr>
           <td>
-            <input type="text" name="login2" id="login2" placeholder="Введите свой логин" />
+            <input
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите свой логин"
+            />
           </td>
         </tr>
         <tr>
           <td>
-            <input type="password" name="password2" placeholder="Введите свой пароль" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Введите свой пароль"
+            />
           </td>
         </tr>
         <tr>
@@ -32,7 +41,7 @@ const Form = (props) => (
         </tr>
         <tr>
           <td align="center">
-          <button>Отправить данные</button>
+            <button>Отправить данные</button>
             {/* <input type="button" value="Войти" id="signInBtn" /> */}
           </td>
         </tr>
