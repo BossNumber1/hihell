@@ -1,9 +1,10 @@
-import React from "react";
+// import React from "react";
 
-const Menu = () => (
-    <div>
+// const Menu = () => (
+//     <div>
 
-<div id="mypopup" class="popup"> 
+{
+  /* <div id="mypopup" class="popup"> 
 
   <div class="popup-content"> 
     
@@ -93,4 +94,5 @@ const Menu = () => (
     </div>
 )
 
-export default Menu;
+export default Menu; */
+}
