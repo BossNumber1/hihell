@@ -1,0 +1,81 @@
+.avaExe {
+    background: url(img/menu/avaExe.jpg);
+    width: 200px;
+    height: 200px;
+
+    /* position: absolute;
+    margin-right: 250px; */
+
+    position: fixed;
+    bottom: 400px;
+    left: 85px;
+  }
+
+.nikname {
+    position: absolute;
+    margin-left: 117px;
+    margin-top: 235px;
+    font-size: 24px;
+    font-style: italic;
+    color: #473104;
+  }
+
+.set {
+    background: url(img/menu/set.jpg);
+    width: 46px;
+    height: 42px;
+
+    position: fixed;
+    bottom: 353px;
+    left: 50px;
+  }
+
+.poisk {
+    background: url(img/menu/poisk.jpg);
+    width: 41px;
+    height: 39px;
+
+    position: fixed;
+    bottom: 353px;
+    left: 265px;
+  }
+
+.friends {
+    background: url(img/menu/friends.jpg);
+    width: 38px;
+    height: 44px;
+
+    position: fixed;
+    bottom: 240px;
+    left: 100px;
+  }
+
+.sms {
+    background: url(img/menu/sms.jpg);
+    width: 47px;
+    height: 47px;
+
+    position: fixed;
+    bottom: 235px;
+    left: 200px;
+  }
+
+.inform {
+    background: url(img/menu/inform.jpg);
+    width: 45px;
+    height: 40px;
+
+    position: fixed;
+    bottom: 120px;
+    left: 50px;
+  }
+
+.exit {
+    background: url(img/menu/exit.jpg);
+    width: 45px;
+    height: 50px;
+
+    position: fixed;
+    bottom: 120px;
+    left: 260px;
+  }
