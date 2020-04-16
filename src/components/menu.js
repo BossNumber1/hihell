@@ -1,26 +1,23 @@
-// import React from "react";
+import React from "react";
 
-// const Menu = () => (
-//     <div>
+const Menu = () => (
+<div>
 
-{
-  /* <div id="mypopup" class="popup"> 
-
-  <div class="popup-content"> 
-    
-    <div class="popup-header">
-     
-      <span class="close" class="hint" data-title="закрыть меню">&times;</span>
-    </div> 
+{/* 
+//   <div id="mypopup" class="popup"> 
+//     <div class="popup-content"> 
+//       <div class="popup-header">
+//         <span class="close" class="hint" data-title="закрыть меню">&times;</span>
+//       </div> 
                 
-     <div class="popup-body"> 
-                    
-        <p class="img">
-        <img src="img/ava.jpg" alt="Аватарка" />
-      </p>
-      
+//       <div class="popup-body">  */}
+
+      {/* <p class="img"> */}
+        <img src="avaExe.jpg" alt="Аватарка" />
+      {/* </p> */}
+{/*       
       <p class="nikname"> 
-            tvoya_techa
+        tvoya_techa
       </p>
       
       <p class="set">
@@ -87,12 +84,12 @@
                 
     </div>
   </div>
-</div>
+</div>*/}
 
 
 
     </div>
 )
 
-export default Menu; */
-}
+export default Menu; 
+
