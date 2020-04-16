@@ -1,0 +1,41 @@
+#plato {
+    position: relative;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    margin: 120px auto;
+    border-radius: 25px;
+}
+
+#messForm {
+    position: inherit;
+    top: 120px;
+}
+
+input {
+    margin-bottom: 250px;
+}
+
+button {
+    position: inherit;
+    top: 5px;
+    left:35%;
+}
+
+label {
+    color: #473104;
+    position: absolute;
+    left: 44%;
+    top: 65px;
+    font-size: 25px;
+    font-family: arial;
+}
+
+#signUpForm label {
+    color: #473104;
+    position: absolute;
+    left: 33%;
+    top: 40px;
+    font-size: 25px;
+    font-family: arial;
+}
