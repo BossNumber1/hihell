@@ -2,9 +2,12 @@ import io from "socket.io-client";
 import React from "react";
 // import './App.css';
 import "./Main.css";
+import "./styleForm.css";
+// import "./stylesForMenu.css";
 // import Info from "./components/info.js";
 // import Menu from "./components/menu.js";
 import Form from "./components/form.js";
+// import MenuDev from "./components/menuDev.js";
 import Login from "./components/login.js";
 
 class App extends React.Component {
@@ -18,9 +21,7 @@ class App extends React.Component {
     e.preventDefault();
     let login = e.target.elements.login.value;
     let password = e.target.elements.password.value;
-    console.log(login);
-    console.log(password);
-
+    
     if (login) {
       const dataLog = await login;
       const dataPass = await password;
@@ -37,9 +38,6 @@ class App extends React.Component {
 
       socket.emit("send mess", { login: login, mess: password });
 
-      socket.on("add mess", function (data) {
-        console.log("проверка! передающиеся данные = ", data);
-      });
     } else {
       this.setState({
         login: undefined,
@@ -55,15 +53,18 @@ class App extends React.Component {
         <div className="main">
           <div className="container">
             <div className="row">
-              <div className="col-sm-5 info">{/* <Menu /> */}</div>
-              <div className="col-sm-7 form">
+              {/* <div> */}
+              <div className="col-sm-5 info">
+                {/* <Menu /> */}
+                {/* <MenuDev /> */}
+                </div>
+              <div className="col-sm-12 form">
                 <Form loginMethod={this.gettingForm} />
                 <Login
                   login={this.state.login}
                   password={this.state.password}
                   error={this.state.error}
                 />
-                {/* <ScriptLoad name={this.state.login} /> */}
               </div>
             </div>
           </div>
