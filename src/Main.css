@@ -1,23 +1,36 @@
 body{
     margin: 0px;
     padding: 0px;
-    /* background-image: url(BG.jpg); */
+    /* background-image: url(/img/avaExe); */
     background-color: #f9d352;
-    /* background-color:  #cfcfcf; */
     background-size: 100% 100%;
 }
+
+/* @font-face {
+    font-family: TemplateGothic; 
+    src: url(17556.ttf); 
+} */
+
 #main2,#signUpForm{
     height: 400px;
     width: 400px;
     background-color: white;
     /* box-shadow: 0 0 0 30px rgba(255,255,255,.2); */
-    /* border-radius: 50%; */
     border-radius: 5%;
     position: fixed;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%) rotateY(0deg);
 }
+
+#main2 input[type=text] {
+    margin-top: 120px;
+}
+
+#signUpForm input[type=text] {
+    margin-top: 90px;/*120*/
+}
+
 table{
     position: absolute;
     top:50%;
@@ -26,63 +39,111 @@ table{
 }
 #title{
     font-family: calibri;
-    font-size: 30px;
+    font-size: 50px;
     color: #473104;
-    /* color:#222; */
     text-align: center;
+    margin-bottom: 7px;
 }
-/* hr{
-    margin: 5px auto;
-    padding: 0px;
-} */
-/* #signUpForm hr{
-    margin: 5px auto;
-    /* margin-right: 1px; */
-    /* width: 180px;
-    padding: 0px;
-} */ 
+
 input[type=text],input[type=password],input[type=email]{
-    height: 5px;/*35*/
-    width: 250px;
+    height: 5px;
     font-family: sans-serif;
-    font-size: 11px;
-    border-radius: 35px;
-    border: none;
-    outline: none;
-    border: 1px solid darkgray;
-    margin-bottom: 10px;
-    padding: 20px;
-}
-#frt{
-    font-family: calibri;
-    color: #473104;
-    /* color:#222; */
     font-size: 12px;
+    outline: none;
+    padding: 20px;
+    color: #473104;
+    /*background: none;*/
+    display: block;
+    margin: 10px auto;
+    text-align: center; 
+    border: 2px solid #3498db;
+    width: 200px;
+    border-radius: 24px;
+    transition: 0.01s; 
 }
+
+input[type = "text"]:focus, input[type = "password"]:focus {
+    width: 280px;
+    color: #473104;
+    border-color: #19bb34d8;
+}
+
+input[type = "text"]:hover, input[type = "password"]:hover {
+    /* background: #04fb2da2;  */
+    border: 2px solid #19bb34d8;
+    transition: 1s;
+    cursor: pointer;    
+}
+
 #signInBtn,#signUpBtn{
     height: 35px;
-    width: 250px;
+    width: 150px;
+    font-family: calibri;
+    font-size: 14px;
+    font-weight: 600;
+    color: #473104;
+    line-height: 0px;
+    /* outline: none; */
+    padding: 20px;
+
+        /*background: none;*/
+        display: block;
+        margin: 10px auto; 
+        text-align: center;
+        border: 2px solid #f9d352;
+       
+        background-color: white;
+        border-radius: 24px;
+        transition: 1s;
+        cursor: pointer;    
+}
+
+#signInBtn {
+    margin-left: -10px;
+    margin-top: 277px;
+}
+
+#signUpBtn {
+    margin-left: -10px;
+    margin-top: 270px;/*300*/
+}
+
+#signInBtn:hover, #signUpBtn:hover {
+    background: #f9d352;  
+}
+
+#signUpMsg{
+    margin-top: 113px;
+    margin-left: 110px;
     font-family: calibri;
     font-size: 14px;
     color: #473104;
-    /* color:white; */
-    line-height: 0px;
-    border: none;
-    outline: none;
-    background-color: #f9d352;
-    /* background-color: #FF5B3F; */
-    border-radius: 35px;
-    padding: 20px;
-    cursor: pointer;
 }
-#signUpMsg,#signInMsg{
+
+#signInMsg {
+    margin-top: 83px;
+    margin-left: 135px;
     font-family: calibri;
-    font-size: 12px;
-    color:#777;
+    font-size: 14px;
+    color: #473104;
 }
-a{
-    color:#313AA3;
+
+a {
+    font-family: calibri;
+    margin-top: 3px;
+    font-size: 14px;
+    color: #473104;
 }
+
+#frt {
+    display: inline-block;
+    position: fixed;
+    margin-top: 0px;
+    margin-left: 220px;
+    width: 350px;
+    padding: 5px;
+}
+
 #main2{
     -webkit-backface-visibility:hidden;
     -webkit-animation-duration:2s;
