@@ -12,8 +12,12 @@
     top: 120px;
 }
 
-input {
-    margin-bottom: 250px;
+#signUpForm #loginReg {
+    margin-top: 95px;
+}
+
+#signUpForm input {
+    margin-bottom: -5px;
 }
 
 button {
@@ -23,6 +27,7 @@ button {
 }
 
 label {
+    /* font-weight: bold; */
     color: #473104;
     position: absolute;
     left: 44%;
