@@ -27,6 +27,12 @@ class Form extends React.Component {
   
         upStyle.animationName = "hideSignIn";
         upStyle.transform = "translate(-50%,-50%) rotateY(0deg)";
+
+        let formo1 = document.getElementById("messForm");
+        formo1.reset();
+
+        let all_messages1 = document.getElementById("all_messages");
+        all_messages1.innerHTML = "";
       }
   }
   
@@ -44,6 +50,12 @@ class Form extends React.Component {
       style.transform = "translate(-50%,-50%) rotateY(0deg)";
       upStyle.animationName = "showSignIn";
       upStyle.transform = "translate(-50%,-50%) rotateY(180deg)";
+
+      let formo2 = document.getElementById("messForm");
+      formo2.reset();
+
+      let all_messages2 = document.getElementById("all_messages");
+      all_messages2.innerHTML = "";
     }
   }
   
@@ -57,31 +69,29 @@ class Form extends React.Component {
                             <input type="text" name="login" placeholder="Введите ваш логин" />
                             <input type="password" name="password" placeholder="Введите ваш пароль" />
                                 <button id="signInBtn">Войти</button>
-                        
-                        <div id="frt">
-                            <a href="#">Забыли пароль?</a>
-                        </div>
 
                         <div id="signUpMsg">
-                            Нет аккаунта? &#8201;
                             <a href="#" id="flipToSignUp" onClick={(evt) => this.output(1)}>
-                                Зарегистрируйтесь
+                                Регистрация
                             </a>
+                        </div>
+
+                        <div id="frt">
+                            <a href="#">Забыли пароль?</a>
                         </div>
 
                     </div>
 
                     <div id="signUpForm">
                         <label>Регистрация</label>
-                            <input type="text" name="loginReg" placeholder="Придумайте логин" />
+                            <input type="text" name="loginReg" id="loginReg" placeholder="Придумайте логин" />
                             <input type="password" name="passwordReg" placeholder="Теперь пароль" />
                             <input type="password" name="rePasswordReg" placeholder="Повторите пароль" />
                                 <button id="signUpBtn">Начать!</button>
                         
                         <div id="signInMsg">
-                            Есть аккаунт? &#8201;
                             <a href="#" id="flipToSignIn" onClick={(evt2) => this.output2(2)}>
-                                Войдите
+                                Войти
                             </a>
                         </div>                    
                     </div>
