@@ -1,15 +1,9 @@
 body{
     margin: 0px;
     padding: 0px;
-    /* background-image: url(/img/avaExe); */
     background-color: #f9d352;
     background-size: 100% 100%;
 }
-
-/* @font-face {
-    font-family: TemplateGothic; 
-    src: url(17556.ttf); 
-} */
 
 #main2,#signUpForm{
     height: 400px;
@@ -54,7 +48,7 @@ input[type=text],input[type=password],input[type=email]{
     color: #473104;
     /*background: none;*/
     display: block;
-    margin: 10px auto;
+    margin: 19px auto;
     text-align: center; 
     border: 2px solid #3498db;
     width: 200px;
@@ -100,12 +94,12 @@ input[type = "text"]:hover, input[type = "password"]:hover {
 
 #signInBtn {
     margin-left: -10px;
-    margin-top: 277px;
+    margin-top: 257px;
 }
 
 #signUpBtn {
     margin-left: -10px;
-    margin-top: 270px;/*300*/
+    margin-top: 285px;
 }
 
 #signInBtn:hover, #signUpBtn:hover {
@@ -113,7 +107,7 @@ input[type = "text"]:hover, input[type = "password"]:hover {
 }
 
 #signUpMsg{
-    margin-top: 113px;
+    margin-top: 93px;
     margin-left: 110px;
     font-family: calibri;
     font-size: 14px;
@@ -122,7 +116,7 @@ input[type = "text"]:hover, input[type = "password"]:hover {
 
 #signInMsg {
     margin-top: 83px;
-    margin-left: 135px;
+    margin-left: 125px;
     font-family: calibri;
     font-size: 14px;
     color: #473104;
@@ -138,8 +132,8 @@ a {
 #frt {
     display: inline-block;
     position: fixed;
-    margin-top: 0px;
-    margin-left: 220px;
+    margin-top: -26px;
+    margin-left: 200px;
     width: 350px;
     padding: 5px;
 }
@@ -171,4 +165,11 @@ a {
     100%{transform: translate(-50%,-50%) rotateY(0deg);}
 }
 
+.infoForm {
+    color: #473104;
+}
 
+.error, #all_messages {
+    color: red;
+    font-size: 18px;
+}
