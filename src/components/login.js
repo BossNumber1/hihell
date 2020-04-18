@@ -2,10 +2,21 @@ import React from "react";
 
 const Login = props => (
   <div className="infoForm">
-    {props.login &&
+    {props.loginReg && 
       <div>
-        <p>Ваш логин: {props.login}</p>
-        <p>Ваш пароль: {props.password}</p>
+        {/* <h2>Поздравляем! Вы успешно зарегистрированы!</h2>
+          <h3>Запомните, 
+            ваш логин: <i>{props.loginReg}</i>, а пароль: <i>{props.passwordReg}</i>
+          </h3> */}
+      </div>
+    }
+
+    {props.login && 
+      <div>
+        {/* <h2>Вы успешно вошли!</h2>
+          <h3>Итак, 
+            ваш логин: <i>{props.login}</i>, а пароль: <i>{props.password}</i>
+          </h3> */}
       </div>
     }
 
