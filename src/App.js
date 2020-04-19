@@ -3,12 +3,13 @@ import React from "react";
 // import './App.css';
 import "./Main.css";
 import "./styleForm.css";
-// import "./stylesForMenu.css";
+import "./stylesForMenu.css";
 // import Info from "./components/info.js";
 // import Menu from "./components/menu.js";
 import Form from "./components/form.js";
-// import MenuDev from "./components/menuDev.js";
+import MenuDev from "./components/menuDev.js";
 import Login from "./components/login.js";
+import HH from "./components/hh.js";
 
 class App extends React.Component {
   state = {
@@ -17,11 +18,17 @@ class App extends React.Component {
     loginReg: undefined,
     passwordReg: undefined,
     error: undefined,
-    errorReg: undefined
+    errorReg: undefined,
+    pusk: undefined,
+    text: undefined,
+    ID: undefined
   };
 
   gettingForm = async (e) => {
     e.preventDefault();
+
+    // let passHran = "";
+
     let login = e.target.elements.login.value;
     let password = e.target.elements.password.value;
 
@@ -62,14 +69,35 @@ class App extends React.Component {
             }
 
             if (fail === false) {
-              socket.emit("send mess", { login: login, mess: password });
+
+              let passHran = localStorage.getItem(login); //получаем ID по логину
+
+              this.setState({
+                ID: passHran
+              });
+
+              console.log("lol2", passHran)
+
+              socket.emit("send mess", { login: login, mess: password, ID: this.state.ID });
 
               socket.on('add mess', function(data) {
                 let all_messages = document.getElementById("all_messages");
                 all_messages.append(data.mess);
-                // all_messages.innerHTML.replace(/<a.*?undefined<\/a>,?/,'');
                 all_messages.innerHTML = all_messages.innerHTML.replace(/<a.*?undefined<\/a>,?/,'');
-              });
+              
+                // console.log(data.missiya); //ответ от сервера по поводу проходки
+                if (data.missiya == "open") {
+                  let telo = document.getElementById("telo");
+                  telo.innerHTML = "";
+
+                  this.setState(
+                    {   
+                      text: <MenuDev /> //выводим меню
+                    }
+                  );
+                }
+              }.bind(this)); 
+              // });
             }
       
           } else {
@@ -120,17 +148,90 @@ class App extends React.Component {
       // let socket = io.connect("localhost:3000");
       
       if (fail === false) {
-        socket.emit("send mess", { loginReg: loginReg, messReg: passwordReg });
 
+        let passHran = localStorage.getItem(loginReg); 
+        // получаем ID по логину
+
+        this.setState({
+          ID: passHran
+        });
+
+        socket.emit("send mess", { loginReg: loginReg, messReg: passwordReg, ID: this.state.ID });
+        
         socket.on('add mess', function(data) {
           let all_messages = document.getElementById("all_messages");
           all_messages.append(data.messRegi);
+
+          // console.log("hi", data);
+
+          let pusk = data.messi;
+
+          this.setState(
+            {
+              pusk: pusk
+            }
+          );
+
+         // ветвление
+
+          if (this.state.pusk !== undefined) {
+            //запускаем юзера в систему === шаг 1
+                     
+
+            // try {
+              localStorage.setItem(loginReg, this.state.pusk); //теперь юзер может не заполнять форму 
+              // } catch (e) {
+              //     if (e.number == 22) { // QUOTA_EXCEEDED_ERR
+              //         alert('Локальное хранилище переполнено');
+              //     }
+              // }
+              
+            //убираем формы
+
+            let telo = document.getElementById("telo");
+            telo.innerHTML = "";
+
+            this.setState(
+              {   
+                text: <MenuDev /> //выводим меню
+              }
+            );
+
+            // 3 шаг - в другой метод, когда юзер входит в сеть
+
+            let passHran = localStorage.getItem(loginReg); 
+            //получаем ID по логину
+
+            this.setState({
+              ID: passHran
+            });
+
+            //теперь надо сравнить пароли, если совпадают пропускать и 
+
+            // socket.emit("send mess", { ID: this.state.ID });
+
+            console.log("uh4!", passHran);
+            console.log("uh9!", this.state.ID);
+
+
+//---------------------------------------------------------------------------------------------------
+
+
+
+
+          } else {
+            this.setState(
+                {
+                    text: "юзер ещё не зареган или не вошёл"
+                }
+            );
+          }
          
           all_messages.innerHTML = all_messages.innerHTML.replace(/<a.*?undefined<\/a>,?/,'');
           
-          // all_messages.innerHTML.replace(/<a.*?undefined<\/a>,?/,'');
+        }.bind(this));
 
-        });
+        // console.log("uh2!", passHran);
       }
 
     } else {
@@ -149,16 +250,13 @@ class App extends React.Component {
         <div className="main">
           <div className="container">
             <div className="row">
-              {/* <div> */}
-              <div className="col-sm-5 info">
-                  <div id="all_messages">
-
+                <div id="all_messages"></div>
+                  <div id="telo">
+                    <Form loginMethod={this.gettingForm} />
                   </div>
-                {/* <Menu /> */}
-                {/* <MenuDev /> */}
-                </div>
-              <div className="col-sm-12 form">
-                <Form loginMethod={this.gettingForm} />
+                  <div>
+                    {this.state.text}
+                  </div>
                 <Login
                   login={this.state.login}
                   password={this.state.password}
@@ -166,7 +264,6 @@ class App extends React.Component {
                   passwordReg={this.state.passwordReg}
                   error={this.state.error}
                 />
-              </div>
             </div>
           </div>
         </div>
