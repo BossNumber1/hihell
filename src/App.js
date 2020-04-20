@@ -83,9 +83,12 @@ class App extends React.Component {
                   let telo = document.getElementById("telo");
                   telo.innerHTML = "";
 
+                  let allMessagesVhod = document.getElementById("all_messages");
+                  allMessagesVhod.innerHTML = "";
+
                   this.setState(
                     {   
-                      text: <MenuDev /> //выводим меню
+                      text: <MenuDev /> 
                     }
                   );
                 }
@@ -169,6 +172,9 @@ class App extends React.Component {
             let telo = document.getElementById("telo");
             telo.innerHTML = "";
 
+            let allMessagesReg = document.getElementById("all_messages");
+            allMessagesReg.innerHTML = "";
+
             this.setState(
               {   
                 text: <MenuDev />
@@ -209,10 +215,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
+      // <div className="wrapper">
         <div className="main">
-          <div className="container">
-            <div className="row">
+          {/* <div className="container"> */}
+            {/* <div className="row"> */}
                 <div id="all_messages"></div>
                   <div id="telo">
                     <Form loginMethod={this.gettingForm} />
@@ -228,9 +234,9 @@ class App extends React.Component {
                   error={this.state.error}
                 />
             </div>
-          </div>
-        </div>
-      </div>
+      //     </div>
+      //   </div>
+      // </div>
     );
   }
 }
