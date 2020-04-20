@@ -2,18 +2,18 @@ import React from "react";
 
 const MenuDev = () => (
     <div>
-        <p class="avaExe"></p>
+        <p className="avaExe"></p>
 
-        <p class="nikname">
+        <p className="nikname">
             tvoya_techa
         </p>
 
-        <p class="set"></p>
-        <p class="poisk"></p>
-        <p class="friends"></p>
-        <p class="sms"></p>
-        <p class="inform"></p>
-        <p class="exit"></p>
+        <p className="set"></p>
+        <p className="poisk"></p>
+        <p className="friends"></p>
+        <p className="sms"></p>
+        <p className="inform"></p>
+        <p className="exit"></p>
     </div>
 )
 
