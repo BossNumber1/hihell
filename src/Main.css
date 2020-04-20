@@ -116,7 +116,7 @@ input[type = "text"]:hover, input[type = "password"]:hover {
 
 #signInMsg {
     margin-top: 83px;
-    margin-left: 125px;
+    margin-left: 85px;
     font-family: calibri;
     font-size: 14px;
     color: #473104;
@@ -134,6 +134,15 @@ a {
     position: fixed;
     margin-top: -26px;
     margin-left: 200px;
+    width: 350px;
+    padding: 5px;
+}
+
+#frt2 {
+    display: inline-block;
+    position: fixed;
+    margin-top: -26px;
+    margin-left: 130px;
     width: 350px;
     padding: 5px;
 }
