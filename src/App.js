@@ -5,11 +5,9 @@ import "./Main.css";
 import "./styleForm.css";
 import "./stylesForMenu.css";
 // import Info from "./components/info.js";
-// import Menu from "./components/menu.js";
 import Form from "./components/form.js";
 import MenuDev from "./components/menuDev.js";
 import Login from "./components/login.js";
-import HH from "./components/hh.js";
 
 class App extends React.Component {
   state = {
@@ -27,8 +25,6 @@ class App extends React.Component {
   gettingForm = async (e) => {
     e.preventDefault();
 
-    // let passHran = "";
-
     let login = e.target.elements.login.value;
     let password = e.target.elements.password.value;
 
@@ -36,7 +32,7 @@ class App extends React.Component {
     let passwordReg = e.target.elements.passwordReg.value;
     let rePasswordReg = e.target.elements.rePasswordReg.value;
     
-    let socket = io.connect("localhost:3000");
+    let socket = io.connect("localhost:3000"); //теперь запускаем socket.io и отправляем данные на сервер
 
     //алгоритм для авторизации
 
@@ -76,8 +72,6 @@ class App extends React.Component {
                 ID: passHran
               });
 
-              console.log("lol2", passHran)
-
               socket.emit("send mess", { login: login, mess: password, ID: this.state.ID });
 
               socket.on('add mess', function(data) {
@@ -85,8 +79,7 @@ class App extends React.Component {
                 all_messages.append(data.mess);
                 all_messages.innerHTML = all_messages.innerHTML.replace(/<a.*?undefined<\/a>,?/,'');
               
-                // console.log(data.missiya); //ответ от сервера по поводу проходки
-                if (data.missiya == "open") {
+                if (data.missiya === "open") { //be ==
                   let telo = document.getElementById("telo");
                   telo.innerHTML = "";
 
@@ -97,7 +90,6 @@ class App extends React.Component {
                   );
                 }
               }.bind(this)); 
-              // });
             }
       
           } else {
@@ -142,15 +134,10 @@ class App extends React.Component {
             error: undefined
           });
         }
-
-      //теперь запускаем socket.io и отправляем данные на сервер
-
-      // let socket = io.connect("localhost:3000");
       
       if (fail === false) {
 
-        let passHran = localStorage.getItem(loginReg); 
-        // получаем ID по логину
+        let passHran = localStorage.getItem(loginReg); // получаем ID по логину
 
         this.setState({
           ID: passHran
@@ -161,8 +148,6 @@ class App extends React.Component {
         socket.on('add mess', function(data) {
           let all_messages = document.getElementById("all_messages");
           all_messages.append(data.messRegi);
-
-          // console.log("hi", data);
 
           let pusk = data.messi;
 
@@ -177,14 +162,7 @@ class App extends React.Component {
           if (this.state.pusk !== undefined) {
             //запускаем юзера в систему === шаг 1
                      
-
-            // try {
-              localStorage.setItem(loginReg, this.state.pusk); //теперь юзер может не заполнять форму 
-              // } catch (e) {
-              //     if (e.number == 22) { // QUOTA_EXCEEDED_ERR
-              //         alert('Локальное хранилище переполнено');
-              //     }
-              // }
+            localStorage.setItem(loginReg, this.state.pusk); //теперь юзер может не заполнять форму 
               
             //убираем формы
 
@@ -193,36 +171,24 @@ class App extends React.Component {
 
             this.setState(
               {   
-                text: <MenuDev /> //выводим меню
+                text: <MenuDev />
               }
             );
 
             // 3 шаг - в другой метод, когда юзер входит в сеть
 
-            let passHran = localStorage.getItem(loginReg); 
-            //получаем ID по логину
+            let passHran = localStorage.getItem(loginReg); //получаем ID по логину
 
             this.setState({
               ID: passHran
             });
 
-            //теперь надо сравнить пароли, если совпадают пропускать и 
-
-            // socket.emit("send mess", { ID: this.state.ID });
-
-            console.log("uh4!", passHran);
-            console.log("uh9!", this.state.ID);
-
-
 //---------------------------------------------------------------------------------------------------
-
-
-
 
           } else {
             this.setState(
                 {
-                    text: "юзер ещё не зареган или не вошёл"
+                  text: "юзер ещё не зареган или не вошёл"
                 }
             );
           }
@@ -230,12 +196,9 @@ class App extends React.Component {
           all_messages.innerHTML = all_messages.innerHTML.replace(/<a.*?undefined<\/a>,?/,'');
           
         }.bind(this));
-
-        // console.log("uh2!", passHran);
       }
 
     } else {
-
       this.setState({
         loginReg: undefined,
         passwordReg: undefined,
