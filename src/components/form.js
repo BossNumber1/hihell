@@ -71,13 +71,13 @@ class Form extends React.Component {
                                 <button id="signInBtn">Войти</button>
 
                         <div id="signUpMsg">
-                            <a href="#" id="flipToSignUp" onClick={(evt) => this.output(1)}>
+                            <a href="/#" id="flipToSignUp" onClick={(evt) => this.output(1)}>
                                 Регистрация
                             </a>
                         </div>
 
                         <div id="frt">
-                            <a href="#">Забыли пароль?</a>
+                            <a href="/#">Забыли пароль?</a>
                         </div>
 
                     </div>
@@ -90,9 +90,13 @@ class Form extends React.Component {
                                 <button id="signUpBtn">Начать!</button>
                         
                         <div id="signInMsg">
-                            <a href="#" id="flipToSignIn" onClick={(evt2) => this.output2(2)}>
-                                Войти
+                            <a href="/#" id="flipToSignIn" onClick={(evt2) => this.output2(2)}>
+                                Назад
                             </a>
+                        </div>
+
+                        <div id="frt2">
+                            <a href="/#">Пользовательское соглашение</a>
                         </div>                    
                     </div>
                 </form>
