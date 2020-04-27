@@ -1,0 +1,71 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-size: 100% 100%;
+}
+
+#teloSet, #teloSetDost {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border-radius: 5%;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotateY(0deg);
+}
+
+#teloSet label, #teloSetDost label {
+    color: #473104;
+    margin-left: -87px;
+    margin-top: 10px;
+}
+
+#name, #logSet {
+    margin-top: 140px;
+}
+
+#butSet, #butSetDost {
+    height: 35px;
+    width: 150px;
+    font-family: calibri;
+    font-size: 14px;
+    font-weight: 600;
+    color: #473104;
+    line-height: 0px;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    border: 2px solid #f9d352;
+    background-color: white;
+    border-radius: 24px;
+    transition: 1s;
+    cursor: pointer; 
+}
+
+#butSet, #butSetDost {
+    margin-left: -10px;
+    margin-top: 280px;
+}
+
+#butSet:hover, #butSetDost:hover {
+    background: #f9d352;  
+}
+
+#devIdSetDost, #divIdTeloSet {
+    margin-top: 93px;
+    margin-left: 150px;
+    font-family: calibri;
+    font-size: 14px;
+    color: #473104;
+}
+
+#teloSet {
+    -webkit-backface-visibility:hidden;
+    -webkit-animation-duration:2s;
+}
+#teloSetDost {
+    -webkit-backface-visibility:hidden;
+    -webkit-transform:translate(-50%,-50%) rotateY(180deg);
+    -webkit-animation-duration:2s;
+}
