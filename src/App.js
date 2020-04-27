@@ -4,10 +4,18 @@ import React from "react";
 import "./Main.css";
 import "./styleForm.css";
 import "./stylesForMenu.css";
+import "./stylesForSet.css";
+import "./stylesForIconMenu.css";
+import "./stylesForPoisk.css";
+import "./stylesForTeloHH.css";
 // import Info from "./components/info.js";
-import Form from "./components/form.js";
+// import Form from "./components/form.js";
 import MenuDev from "./components/menuDev.js";
 import Login from "./components/login.js";
+// import Set from "./components/set.js";
+import IconMenu from "./components/iconMenu.js";
+import Poisk from "./components/poisk.js";
+import TeloHH from "./components/teloHH.js";
 
 class App extends React.Component {
   state = {
@@ -221,7 +229,7 @@ class App extends React.Component {
             {/* <div className="row"> */}
                 <div id="all_messages"></div>
                   <div id="telo">
-                    <Form loginMethod={this.gettingForm} />
+                    {/* <Form loginMethod={this.gettingForm} /> */}
                   </div>
                   <div>
                     {this.state.text}
@@ -233,6 +241,10 @@ class App extends React.Component {
                   passwordReg={this.state.passwordReg}
                   error={this.state.error}
                 />
+                {/* <Set /> */}
+                <IconMenu />
+                <Poisk />
+                <TeloHH />
             </div>
       //     </div>
       //   </div>
