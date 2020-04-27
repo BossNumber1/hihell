@@ -1,0 +1,165 @@
+#poisk {
+    margin-left: 80px;
+    margin-top: -49px;/*-55*/
+    height: 1px;
+}
+
+#butPoisk {
+    background: url(img/menu/poisk.jpg);
+    width: 41px;
+    height: 39px;
+    margin-top: -59px;/*-60*/
+    margin-left: 350px;
+}
+
+#poisk:focus {
+    width: 200px;
+}
+
+#bukvar {
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 17px;
+    margin-left: 190px;
+}
+
+#infoUserPoisk {
+    position: absolute;
+    display: flex;
+    margin-top: 47px;
+    width: 400px;
+    height: 50px;
+}
+
+#infoUserPoisk2 {
+    position: absolute;
+    display: flex;
+    margin-top: 97px;
+    width: 400px;
+    height: 50px;
+}
+
+#avaUsers {
+    background: url(img/menu/miniAvaExe.jpg);
+    width: 40px;
+    height: 40px;
+    border-radius: 505px;
+    border: 1px solid #473104;
+    /* position: inherit; */
+    /* margin: auto; */
+    margin: auto;
+    margin-left: 12px;
+    margin-right: 2px;
+    /* margin-top: 0px; */
+    /* position: absolute; */
+    /* margin-top: 47px; */
+    /*17*/
+    /* margin-left: 10px; */
+}
+
+#avaUsers2 {
+    background-color: gray;
+    width: 40px;
+    height: 40px;
+    border-radius: 505px;
+    border: 1px solid #473104;
+    margin: auto;
+    margin-left: 12px;
+    margin-right: 2px;
+}
+
+#infoUP {
+    margin: auto;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+#nameUser {
+    /* position: absolute; */
+    font-size: 13px;
+    font-weight: bold;
+    /* position: inherit;
+    margin-top: -53px; */
+    margin: auto;
+    /* margin-top: 50px; */
+    /* margin-left: 70px; */
+}
+
+#numFri {
+    color: gray;
+    /* position: absolute; */
+    font-size: 13px;
+    font-style: italic;
+    /* position: inherit; */
+    margin: auto;
+    /* margin-top: -33px; */
+    /* margin-top: 68px; */
+    /* margin-left: 70px; */
+}
+
+#online {
+    background-color: #22DADA;
+    width: 8px;
+    height: 8px;
+    border-radius: 67px;
+    /* position: inherit; */
+    /* position: absolute; */
+    /* margin-top: -47px; */
+    /* margin: auto; */
+    margin-top: 3.5%;
+    margin-right: 35px;
+    /* margin-top: 56px; */
+    /* margin-left: 150px; */
+}
+
+#addUP {
+    margin: auto;
+    margin-right: 0;
+    display: flex;
+}
+
+#smsW {
+    background: url(img/menu/smsW.png);
+    width: 47px;
+    height: 32px;
+    /* position: absolute; */
+    /* position: inherit; */
+    margin: auto;
+    margin-right: 0px;
+    margin-left: 12px;
+    /* margin-top: -54px; */
+    /* margin-top: 54px; */
+    /* margin-left: 275px; */
+}
+
+#friW {
+    background: url(img/menu/friW.png);
+    width: 40px;
+    height: 42px;
+    /* position: inherit; */
+    /* position: absolute; */
+    /* margin-top: -59px; */
+    margin: auto;
+    margin-left: 6px;
+    margin-right: 12px;
+    /* margin-top: 47px; */
+    /* margin-left: 280px; */
+    /*325*/
+}
+
+#noFriW {
+    background: url(img/menu/noFriW.png);
+    width: 40px;
+    height: 42px;
+    /* position: inherit; */
+    /* position: absolute; */
+    /* margin-top: -59px; */
+    margin: auto;
+    margin-left: 6px;
+    margin-right: 12px;
+    /* margin-top: 47px; */
+    /* margin-left: 280px; */
+    /*325*/
+}
