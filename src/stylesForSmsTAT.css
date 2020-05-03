@@ -1,0 +1,127 @@
+#smsTAT {
+    color: #473104;
+    width: 230px;
+    position: absolute;
+    margin-top: -1270px;
+    margin-left: 36px;
+}
+
+#smsWTAT {
+    background: url(img/menu/smsW.png);
+    width: 47px;
+    height: 32px;
+    position: absolute;
+    /* position: inherit; */
+    /* margin: auto; */
+    margin-right: 0px;
+    margin-left: 330px;
+    /* margin-top: -54px; */
+    margin-top: -1265px;
+    /* margin-left: 275px; */
+}
+
+@font-face {
+    font-family: Caveat; 
+    src: url(CaveatB.ttf); 
+}
+
+#nik {
+    color: #473104;
+    /* font-family: calibri; */
+    font-family: Caveat;
+    font-size: 24px;
+    /* font-style: italic; */
+    position: absolute;
+    margin-top: -1695px;
+    margin-left: 80px;
+}
+
+#onlineTAT {
+    background-color: #22DADA;
+    width: 8px;
+    height: 8px;
+    border-radius: 67px;
+    /* position: inherit; */
+    position: absolute;
+    /* margin-top: -47px; */
+    /* margin: auto; */
+    margin-top: -1682px;
+    margin-right: 35px;
+    /* margin-top: 56px; */
+    margin-left: 185px;
+}
+
+#avaUsersTAT {
+    background: url(img/menu/miniAvaExe.jpg);
+    width: 40px;
+    height: 40px;
+    border-radius: 505px;
+    border: 1px solid #473104;
+    /* position: inherit; */
+    /* margin: auto; */
+    margin: auto;
+    margin-left: 340px;
+    margin-right: 2px;
+    /* margin-top: 0px; */
+    position: absolute;
+    margin-top: -1700px;
+    /*17*/
+    /* margin-left: 10px; */
+}
+
+#friAdd {
+    background: url(img/menu/friAdd2.jpg);
+    width: 69px;
+    height: 44px;
+    /* position: inherit; */
+    position: absolute;
+    /* margin-top: -59px; */
+    margin: auto;
+    margin-left: 210px;
+    margin-right: 12px;
+    margin-top: -1700px;
+    /* margin-left: 280px; */
+    /*325*/
+}
+
+#smsI {
+    background-color: #f9d352;
+    width: 186px;
+    height: 80px;
+    position: absolute;
+    margin-top: -1380px;
+    margin-left: 20px;
+    border-radius: 15px;
+    border: 1px solid #473104;
+}
+
+#diaI {
+    color: black;
+    position: absolute;
+    font-family: calibri;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: -1363px;
+    margin-left: 85px;
+}
+
+#diaItrans {
+    color: #473104;
+    position: absolute;
+    font-family: calibri;
+    font-size: 18px;
+    font-weight: bold;
+    /* font-style: italic; */
+    margin-top: -1337px;
+    margin-left: 95px;
+}
+
+#timeSms {
+    color: gray;
+    position: absolute;
+    margin-top: -1315px;
+    margin-left: 220px;
+    font-style: italic;
+    font-size: 14px;
+}
