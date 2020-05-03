@@ -5,9 +5,11 @@ const SmsTAT = () => (
         <input type="text" placeholder="Введите своё сообщение" id="smsTAT" />
         <p id="smsWTAT"></p>
         <p id="nik">Крис Асмус</p>
-        <p id="onlineTAT"></p>
+        {/* <p id="onlineTAT"></p> */}
         <p id="avaUsersTAT"></p>
-        <p id="friAdd"></p>
+        {/* <p id="friAdd"></p> */}
+        <div id="status">был в 19:35</div>
+        <p id="friTru"></p>
         <p id="dataSms">29.01.20</p>
         <div id="smsI"></div>
             <div id="smsI" style={{marginTop: -1470 + 'px', marginLeft: 150 + 'px'}}></div>
