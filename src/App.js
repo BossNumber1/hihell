@@ -8,14 +8,17 @@ import "./stylesForSet.css";
 import "./stylesForIconMenu.css";
 import "./stylesForPoisk.css";
 import "./stylesForTeloHH.css";
+import "./styleScrol.css";
+import "./stylesForSmsTAT.css";
 // import Info from "./components/info.js";
 // import Form from "./components/form.js";
 import MenuDev from "./components/menuDev.js";
 import Login from "./components/login.js";
 // import Set from "./components/set.js";
 import IconMenu from "./components/iconMenu.js";
-import Poisk from "./components/poisk.js";
+// import Poisk from "./components/poisk.js";
 import TeloHH from "./components/teloHH.js";
+import SmsTAT from "./components/smsTAT.js";
 
 class App extends React.Component {
   state = {
@@ -243,8 +246,11 @@ class App extends React.Component {
                 />
                 {/* <Set /> */}
                 <IconMenu />
-                <Poisk />
+                {/* <Poisk buk="K" /> */}
+                {/* <Poisk buk={[10, 2, 3, 4, 5, 6, 7, 8, 9]} /> */}
+                {/* <Poisk buk={["A", "B"]} /> */}
                 <TeloHH />
+                <SmsTAT />
             </div>
       //     </div>
       //   </div>
