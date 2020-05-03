@@ -3,20 +3,21 @@
     width: 230px;
     position: absolute;
     margin-top: -1270px;
-    margin-left: 36px;
+    margin-left: 20px;/*36*/
+    /* border: 2px solid #473104; */
 }
 
 #smsWTAT {
-    background: url(img/menu/smsW.png);
+    background: url(img/menu/send.png);
     width: 47px;
-    height: 32px;
+    height: 47px;/*32*/
     position: absolute;
     /* position: inherit; */
     /* margin: auto; */
     margin-right: 0px;
-    margin-left: 330px;
+    margin-left: 325px;/*330*/
     /* margin-top: -54px; */
-    margin-top: -1265px;
+    margin-top: -1273px;/*-1265*/
     /* margin-left: 275px; */
 }
 
@@ -52,22 +53,27 @@
 }
 
 #avaUsersTAT {
-    background: url(img/menu/miniAvaExe.jpg);
+    /* background: url(img/menu/miniAvaExe.jpg); */
+    background: url(img/menu/ang.png);
     width: 40px;
     height: 40px;
+    /* width: 100%;
+    height: 100%; */
     border-radius: 505px;
     border: 1px solid #473104;
-    /* position: inherit; */
-    /* margin: auto; */
     margin: auto;
     margin-left: 340px;
     margin-right: 2px;
-    /* margin-top: 0px; */
     position: absolute;
     margin-top: -1700px;
-    /*17*/
-    /* margin-left: 10px; */
 }
+
+/* #avaUsersTAT img { */
+    /* width: 100%;
+    height: 100%; */
+    /* width: 40px;
+    height: 40px; 
+}   */
 
 #friAdd {
     background: url(img/menu/friAdd.jpg);
@@ -103,7 +109,7 @@
     font-weight: bold;
     font-style: italic;
     margin-top: -1363px;
-    margin-left: 85px;
+    margin-left: 80px;
 }
 
 #diaItrans {
@@ -114,7 +120,7 @@
     font-weight: bold;
     /* font-style: italic; */
     margin-top: -1337px;
-    margin-left: 95px;
+    margin-left: 65px;
 }
 
 #timeSms {
@@ -122,6 +128,15 @@
     position: absolute;
     margin-top: -1315px;
     margin-left: 220px;
+    font-style: italic;
+    font-size: 14px;
+}
+
+#dataSms {
+    color: gray;
+    position: absolute;
+    margin-top: -1600px;
+    margin-left: 190px;
     font-style: italic;
     font-size: 14px;
 }
