@@ -90,6 +90,21 @@
     /*325*/
 }
 
+#friTru {
+    background: url(img/menu/friTru.jpg);
+    width: 69px;
+    height: 44px;
+    /* position: inherit; */
+    position: absolute;
+    /* margin-top: -59px; */
+    margin: auto;
+    margin-left: 210px;
+    margin-right: 12px;
+    margin-top: -1700px;
+    /* margin-left: 280px; */
+    /*325*/
+}
+
 #smsI {
     background-color: #f9d352;
     width: 186px;
@@ -139,4 +154,14 @@
     margin-left: 190px;
     font-style: italic;
     font-size: 14px;
+}
+
+#status {
+    color: #473104;
+    position: absolute;
+    margin-top: -1670px;
+    margin-left: 95px;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: italic;
 }
