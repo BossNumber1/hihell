@@ -21,8 +21,8 @@
     font-size: 15px;
     font-weight: bold;
     font-style: italic;
-    margin-top: 17px;
-    margin-left: 190px;
+    /* margin-top: 17px; */
+    margin-left: 200px;
 }
 
 #infoUserPoisk {
@@ -33,13 +33,13 @@
     height: 50px;
 }
 
-#infoUserPoisk2 {
+/* #infoUserPoisk2 {
     position: absolute;
     display: flex;
     margin-top: 97px;
     width: 400px;
     height: 50px;
-}
+} */
 
 #avaUsers {
     background: url(img/menu/miniAvaExe.jpg);
